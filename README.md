@@ -1,4 +1,13 @@
-angular-webpack-plugin
-======================
+# angular-webpack-plugin [![Build Status](https://secure.travis-ci.org/stackfull/angular-webpack-plugin.png?branch=master)](http://travis-ci.org/stackfull/angular-webpack-plugin)
 
-Plugin for webpack to teach it angular.js modules
+Makes webpack aware of AngularJS modules.
+
+## Getting Started
+This project is just getting off the ground.
+
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2014 Paul Thomas. Licensed under the MIT license.

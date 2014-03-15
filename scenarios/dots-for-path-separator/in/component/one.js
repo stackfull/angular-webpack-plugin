@@ -1,0 +1,2 @@
+
+angular.module('component/one', []);

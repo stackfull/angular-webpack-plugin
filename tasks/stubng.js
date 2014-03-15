@@ -1,0 +1,2 @@
+
+// stub for angular module
