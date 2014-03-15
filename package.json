@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "description": "Makes webpack aware of AngularJS modules.",
   "homepage": "https://github.com/stackfull/angular-webpack-plugin",
-  "bugs": "https://github.com/stackfull/angular-virtual-scroll/issues",
+  "bugs": "https://github.com/stackfull/angular-webpack-plugin/issues",
   "author": {
     "name": "Paul Thomas",
     "email": "paul@stackfull.com",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stackfull/angular-virtual-scroll.git"
+    "url": "https://github.com/stackfull/angular-webpack-plugin.git"
   },
   "licenses": [
     {
