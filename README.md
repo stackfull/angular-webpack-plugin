@@ -1,4 +1,4 @@
-# angular-webpack-plugin [![Build Status](https://secure.travis-ci.org/stackfull/angular-webpack-plugin.png?branch=master)](http://travis-ci.org/stackfull/angular-webpack-plugin)
+# angular-webpack-plugin [![Build Status](https://travis-ci.org/stackfull/angular-webpack-plugin.png?branch=master)](https://travis-ci.org/stackfull/angular-webpack-plugin)
 
 Makes webpack aware of AngularJS modules.
 
