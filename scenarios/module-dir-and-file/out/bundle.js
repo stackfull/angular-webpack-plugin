@@ -1,19 +1,22 @@
 /* 0 */
 /***/ function(module, exports, require) {
+  var __WEBPACK_LOCAL_MODULE_0__;
         /* WEBPACK VAR INJECTION */(function(require, angular) {// deps with dots
-        angular.module('myModule', [require(1).name, require(2).name]);
+        (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('myModule', [require(1).name, require(2).name]));
         /* WEBPACK VAR INJECTION */}.call(exports, require, require(3)))
 /***/ },
 /* 1 */
 /***/ function(module, exports, require) {
+  var __WEBPACK_LOCAL_MODULE_0__;
         /* WEBPACK VAR INJECTION */(function(require, angular) {
-        angular.module('component', []);
+        (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component', []));
         /* WEBPACK VAR INJECTION */}.call(exports, require, require(3)))
 /***/ },
 /* 2 */
 /***/ function(module, exports, require) {
+  var __WEBPACK_LOCAL_MODULE_0__;
         /* WEBPACK VAR INJECTION */(function(require, angular) {
-        angular.module('component.two', []);
+        (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component.two', []));
         /* WEBPACK VAR INJECTION */}.call(exports, require, require(3)))
 /***/ },
 /* 3 */
