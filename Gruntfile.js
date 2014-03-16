@@ -32,7 +32,7 @@ module.exports = function (grunt) {
       },
       lib: {
         files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
+        tasks: ['jshint:lib', 'webpackScenario']
       },
       test: {
         files: ['scenarios/**/*'],
