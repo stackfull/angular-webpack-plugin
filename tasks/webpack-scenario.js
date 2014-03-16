@@ -76,9 +76,13 @@ module.exports = function(grunt){
               var expected = grunt.file.read(abspath);
               if( _.str.clean(expected) !== _.str.clean(actual)){
                 errors.push(p + " didn't match expected content");
-                grunt.log.debug(actual);
+                if( grunt.option('debug') ){
+                  grunt.log.debug("Expected:");
+                  process.stdout.write(expected);
+                  grunt.log.debug("Actual:");
+                  process.stdout.write(actual);
                 //grunt.file.write('bundle.js', actual);
-                grunt.log.debug(expected);
+                }
               }
             }else{
               errors.push("Didn't find " + p + " after compilation");
