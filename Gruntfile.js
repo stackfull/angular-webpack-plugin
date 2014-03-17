@@ -1,5 +1,6 @@
 'use strict';
 var _ = require('lodash');
+var path = require('path');
 
 module.exports = function (grunt) {
   // Show elapsed time at the end
@@ -7,6 +8,9 @@ module.exports = function (grunt) {
   // Load all grunt tasks
   require('load-grunt-tasks')(grunt);
   grunt.task.loadTasks('tasks');
+
+  var scenarios = grunt.file.expand({cwd:'test/scenarios'}, '*');
+  grunt.log.writeln("scenarios: ", scenarios);
 
   // Project configuration.
   grunt.initConfig({
@@ -22,8 +26,15 @@ module.exports = function (grunt) {
         src: ['lib/**/*.js']
       }
     },
-    webpackScenario: _.object(_.map(grunt.file.expand({cwd:'scenarios'}, '*'), function(test){
-      return [test, { src: ['scenarios/'+test+'/webpack.conf.js'] }];
+    webpackScenario: _.object(_.map(scenarios, function(test){
+      return [test, { src: ['test/scenarios/'+test+'/webpack.conf.js'] }];
+    })),
+    karma: _.object(_.map(scenarios, function(test){
+      return [test, {
+        configFile: path.resolve('test', 'scenarios', test, 'karma.conf.js'),
+        logLevel: 'DEBUG',
+        singleRun: true,
+      }];
     })),
     watch: {
       gruntfile: {
@@ -35,7 +46,7 @@ module.exports = function (grunt) {
         tasks: ['jshint:lib', 'webpackScenario']
       },
       test: {
-        files: ['scenarios/**/*'],
+        files: ['test/**/*'],
         tasks: ['webpackScenario']
       }
     }
