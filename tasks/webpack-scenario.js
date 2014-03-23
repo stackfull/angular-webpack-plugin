@@ -6,6 +6,7 @@ var webpack = require('webpack');
 var async = require('async');
 var _ = require('lodash');
 _.str = require('underscore.string');
+var UglifyJS = require("uglify-js");
 
 function MockFileSystemPlugin() {
   this.files = {};
@@ -29,9 +30,16 @@ MockFileSystemPlugin.prototype.apply = function(compiler){
   });
 };
 
-var IGNORE_BEFORE = "/******/ ([";
-var IGNORE_AFTER = "/******/ ])";
+var IGNORE_BEFORE = //"/******/ ([";
+"/************************************************************************/";
 
+function normalise(content){
+  return UglifyJS.minify(content, {
+    fromString: true,
+    //mangle: false,
+    compress: false
+  }).code;
+}
 
 module.exports = function(grunt){
 
@@ -72,9 +80,10 @@ module.exports = function(grunt){
             if( _.has(mockFs.files, p) ){
               var actual = mockFs.files[p];
               actual = _.str.strRight(actual, IGNORE_BEFORE);
-              actual = _.str.strLeftBack(actual, IGNORE_AFTER);
               var expected = grunt.file.read(abspath);
-              if( _.str.clean(expected) !== _.str.clean(actual)){
+              var actualZ = normalise(actual);
+              var expectedZ = normalise(expected);
+              if( expectedZ !== actualZ){
                 errors.push(p + " didn't match expected content");
                 if( grunt.option('debug') ){
                   grunt.log.debug("Expected:");

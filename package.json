@@ -38,7 +38,8 @@
     "grunt-karma": "~0.8.2",
     "karma-jasmine": "~0.2.2",
     "karma-phantomjs-launcher": "~0.1.2",
-    "exports-loader": "^0.6.2"
+    "exports-loader": "^0.6.2",
+    "uglify-js": "~2.4.12"
   },
   "scripts": {
     "test": "grunt webpackScenario"
