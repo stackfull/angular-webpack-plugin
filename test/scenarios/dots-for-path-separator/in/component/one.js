@@ -1,2 +1,2 @@
 
-angular.module('component/one', []);
+angular.module('component.one', []);

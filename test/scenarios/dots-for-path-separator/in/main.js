@@ -1,2 +1,2 @@
 // deps with dots
-angular.module('myModule', ['component/one', 'component.two']);
+angular.module('main', ['component.one']);

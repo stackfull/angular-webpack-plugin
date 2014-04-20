@@ -81,6 +81,7 @@ module.exports = function(grunt){
               var actual = mockFs.files[p];
               actual = _.str.strRight(actual, IGNORE_BEFORE);
               var expected = grunt.file.read(abspath);
+              grunt.file.write('bundle.js', actual);
               var actualZ = normalise(actual);
               var expectedZ = normalise(expected);
               if( expectedZ !== actualZ){
@@ -101,7 +102,7 @@ module.exports = function(grunt){
             grunt.log.debug("compiled "+confFile+" OK.");
             cb();
           }else{
-            cb(new Error(errors.join('\n')));
+            cb(new Error("scenario failed"));
           }
         }
       });

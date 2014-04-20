@@ -1,4 +1,4 @@
 // Simplest test
-angular.module('myModule', []);
+angular.module('main', []);
 
-angular.module('myModule').config(function(){});
+angular.module('main').config(function(){});

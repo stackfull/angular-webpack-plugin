@@ -1,22 +1,21 @@
 ([
-  function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('myModule', [require(1).name, require(2).name]));
-  }.call(exports, require, require(3)))
+  function(module, exports, __webpack_require__) {
+  __webpack_require__(2);
+  __webpack_require__(1);
+  (function(angular) {
+    (module.exports['myModule'] = angular.module('myModule', ['component', 'component.two']));
+  }.call(exports, __webpack_require__(3)))
 },
-function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component', []));
-    }.call(exports, require, require(3)))
+function(module, exports, __webpack_require__) {
+  (function(angular) {
+    (module.exports['component'] = angular.module('component', []));
+    }.call(exports, __webpack_require__(3)))
 },
-function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component.two', []));
-    }.call(exports, require, require(3)))
+function(module, exports, __webpack_require__) {
+  (function(angular) {
+    (module.exports['component.two'] = angular.module('component.two', []));
+    }.call(exports, __webpack_require__(3)))
 },
-function(module, exports, require) {
+function(module, exports, __webpack_require__) {
 }
 ])

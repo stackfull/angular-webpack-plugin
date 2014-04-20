@@ -1,23 +1,19 @@
 ([
-  function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('myModule', [require(2).name, require(3).name]));
-  }.call(exports, require, require(1)))
+  function(module, exports, __webpack_require__) {
+
+  __webpack_require__(1);
+  
+  (function(angular) {
+    (module.exports['main'] = angular.module('main', ['component.one' ]));
+  }.call(exports, __webpack_require__(2)))
 },
-function(module, exports, require) {
+function(module, exports, __webpack_require__) {
+  (function(angular) {
+    (module.exports['component.one'] = angular.module('component.one', []));
+  }.call(exports, __webpack_require__(2)))
 },
-function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component/one', []));
-  }.call(exports, require, require(1)))
-},
-function(module, exports, require) {
-  var __WEBPACK_LOCAL_MODULE_0__;
-  (function(require, angular) {
-    (__WEBPACK_LOCAL_MODULE_0__ = module.exports = angular.module('component.two', []));
-  }.call(exports, require, require(1)))
+function(module, exports, __webpack_require__) {
+  // stub
 }
 ])
 
