@@ -1,2 +1,2 @@
 // Simplest test
-angular.module('myModule', []);
+angular.module('main', []);

@@ -26,16 +26,26 @@ module.exports = function (grunt) {
         src: ['lib/**/*.js']
       }
     },
-    webpackScenario: _.object(_.map(scenarios, function(test){
-      return [test, { src: ['test/scenarios/'+test+'/webpack.conf.js'] }];
-    })),
-    karma: _.object(_.map(scenarios, function(test){
-      return [test, {
-        configFile: path.resolve('test', 'scenarios', test, 'karma.conf.js'),
-        logLevel: 'DEBUG',
-        singleRun: true,
-      }];
-    })),
+    webpackScenario: _.object(_.filter(_.map(scenarios, function(test){
+      var confFile = path.resolve('test', 'scenarios', test, 'webpack.conf.js');
+      if( grunt.file.exists(confFile) ){
+        return [test, { src: [confFile] }];
+      }else{
+        return null;
+      }
+    }))),
+    karma: _.object(_.filter(_.map(scenarios, function(test){
+      var confFile = path.resolve('test', 'scenarios', test, 'karma.conf.js');
+      if( grunt.file.exists(confFile) ){
+        return [test, {
+          configFile: confFile,
+          logLevel: 'DEBUG',
+          singleRun: true,
+        }];
+      }else{
+        return null;
+      }
+    }))),
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -53,7 +63,7 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'webpackScenario']);
+  grunt.registerTask('default', ['jshint', 'webpackScenario', 'karma']);
 
 
 };
