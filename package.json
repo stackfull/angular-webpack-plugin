@@ -1,6 +1,6 @@
 {
   "name": "angular-webpack-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "description": "Makes webpack aware of AngularJS modules.",
   "homepage": "https://github.com/stackfull/angular-webpack-plugin",
