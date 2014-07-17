@@ -20,7 +20,8 @@
     }
   ],
   "peerDependencies": {
-    "webpack": "~1.1.0"
+    "webpack": "^1.1.0",
+    "exports-loader": "^0.6.2"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.10.0",
