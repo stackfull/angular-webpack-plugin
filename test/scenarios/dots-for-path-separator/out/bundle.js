@@ -14,6 +14,7 @@ function(module, exports, __webpack_require__) {
 },
 function(module, exports, __webpack_require__) {
   // stub
+  module.exports = window.angular
 }
 ])
 

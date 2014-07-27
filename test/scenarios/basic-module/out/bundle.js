@@ -7,5 +7,6 @@
 },
 function(module, exports, require) {
   // angular.js stub
+  module.exports = window.angular
 }
 ])
