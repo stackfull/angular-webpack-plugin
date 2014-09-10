@@ -1,0 +1,17 @@
+{
+  "name": "webpack-angular",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "angular-webpack-plugin": "^0.0.2",
+    "exports-loader": "^0.6.2",
+    "webpack": "^1.4.0-beta4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott M Ashton <ScottMortonAshton@gmail.com> (https://github.com/scottmas)",
+  "license": "ISC"
+}
