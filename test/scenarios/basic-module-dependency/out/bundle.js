@@ -1,20 +1,33 @@
-([
-function(module, exports, __webpack_require__) {
-  // 'dependency'
-  __webpack_require__(1);
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
 
-  (function(angular) {
-    (module.exports['myModule'] = angular.module('myModule', ['dependency']));
-  }.call(exports, __webpack_require__(2)))
+        __webpack_require__(1);
+        /* WEBPACK VAR INJECTION */(function(angular) {// 1 dep
+        (module.exports['myModule'] = angular.module('myModule', ['dependency'])
+);
 
-},
-function(module, exports, __webpack_require__) {
+        /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-  (function(angular) {
-    (module.exports['dependency'] = angular.module('dependency', []));
-  }.call(exports, __webpack_require__(2)))
-},
-function(module, exports, __webpack_require__) {
-  // stub
-}
-])
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+        /* WEBPACK VAR INJECTION */(function(angular) {
+        (module.exports['dependency'] = angular.module('dependency', []));
+
+        /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+
+        // stub for angular module
+
+
+        /*** EXPORTS FROM exports-loader ***/
+        module.exports = window.angular
+
+/***/ }
+/******/ ])
