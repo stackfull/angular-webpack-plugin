@@ -1,4 +1,5 @@
 # angular-webpack-plugin [![Build Status](https://travis-ci.org/stackfull/angular-webpack-plugin.png?branch=master)](https://travis-ci.org/stackfull/angular-webpack-plugin)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/stackfull/angular-webpack-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Makes webpack aware of AngularJS modules.
 
