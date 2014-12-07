@@ -2,21 +2,21 @@
   function(module, exports, __webpack_require__) {
 
   __webpack_require__(1);
-  
   (function(angular) {
-    (module.exports['main'] = angular.module('main', ['component.one' ]));
+    (module.exports['main'] = angular.module('main', ['ngRoute']));
   }.call(exports, __webpack_require__(2)))
 },
 function(module, exports, __webpack_require__) {
   (function(angular) {
-    (module.exports['component.one'] = angular.module('component.one', []));
+    (function(window, angular, undefined){
+      // stub
+    }(window, window.angular));
   }.call(exports, __webpack_require__(2)))
 },
 function(module, exports, __webpack_require__) {
   (function(angular) {
-  // stub
+  // angular.js stub
   module.exports = window.angular
   }.call(exports, __webpack_require__(2)))
 }
 ])
-

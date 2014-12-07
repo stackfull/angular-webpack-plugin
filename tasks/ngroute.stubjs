@@ -1,0 +1,4 @@
+
+(function(window, angular, undefined) {
+// stub of angular-route.js
+})(window, window.angular);

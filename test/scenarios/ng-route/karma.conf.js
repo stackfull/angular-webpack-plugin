@@ -26,7 +26,8 @@ module.exports = function(config) {
       resolve: {
         root: path.resolve(__dirname, 'in'),
         alias: {
-          angular$: path.resolve(__dirname, '../../vendor/angular/angular.js')
+          angular$: path.resolve(__dirname, '../../vendor/angular/angular.js'),
+          ngRoute$: path.resolve(__dirname, '../../vendor/angular/angular-route.js')
         }
       },
       plugins: [new AngularPlugin()]

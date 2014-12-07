@@ -54,7 +54,8 @@ module.exports = function(grunt){
         resolve: {
           root: path.resolve(confFile, '..', 'in'),
           alias: {
-            angular: path.resolve(__dirname, 'stubng.js')
+            angular: path.resolve(__dirname, 'ng.stubjs'),
+            ngRoute: path.resolve(__dirname, 'ngroute.stubjs')
           }
         },
       }, config);
