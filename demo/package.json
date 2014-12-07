@@ -6,7 +6,7 @@
   "dependencies": {
     "angular-webpack-plugin": "^0.0.2",
     "exports-loader": "^0.6.2",
-    "webpack": "^1.4.0-beta4"
+    "webpack": "^1.4.0"
   },
   "devDependencies": {},
   "scripts": {
