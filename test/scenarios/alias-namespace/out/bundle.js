@@ -1,7 +1,7 @@
 ([
   function(module, exports, __webpack_require__) {
-  __webpack_require__(2);
   __webpack_require__(1);
+  __webpack_require__(2);
   (function(angular) {
     (module.exports['main'] = angular.module('main', ['myLibrary.one', 'myLibrary.two.something']));
   }.call(exports, __webpack_require__(3)))
