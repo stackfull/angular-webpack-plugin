@@ -2,14 +2,22 @@
 
 Makes webpack aware of AngularJS modules.
 
-## Getting Started
-This project is just getting off the ground.
+## Status
+
+**This project is abandoned!**
+
+It became apparent that the common usage patterns of angular modules were
+simply incompatible with file base modules. This plugin *will* work if you are
+careful to identify angular modules with files and structure your dependencies
+"downwards", but most angular users do it the other way (e.g. declare a module
+in one file and add directives etc. to that module from other files). The result
+is that this plugin is only useful if you don't depend on common third party
+libraries.
 
 It is at the stage now where you can use it to get angular apps webpacked
 without needing `require()` in your code, but it does it by trying to map
 between angular module names and file names. The conventions for doing this are
-various, so it will not fit all cases. Please submit an issue on github if it
-isn't working for your modules and I'll try to iron out the wrinkles over time.
+various, so it will not fit all cases.
 
 To see it in action, I've [forked the angular-seed project](https://github.com/stackfull/angular-seed)
 
