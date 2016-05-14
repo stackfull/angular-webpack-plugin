@@ -14,6 +14,9 @@ in one file and add directives etc. to that module from other files). The result
 is that this plugin is only useful if you don't depend on common third party
 libraries.
 
+For an alternative approach, have a look at https://www.npmjs.com/package/remove-angular-modules-loader
+
+----
 It is at the stage now where you can use it to get angular apps webpacked
 without needing `require()` in your code, but it does it by trying to map
 between angular module names and file names. The conventions for doing this are
